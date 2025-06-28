@@ -2,10 +2,10 @@ import { createContext, useContext } from "react";
 
 const HomeCtx = createContext();
 
-export default function HomeCtxProvider({ chidren }) {
+export default function HomeCtxProvider({ children }) {
   const value = {};
 
-  return <HomeCtx.Provider value={value}>{chidren}</HomeCtx.Provider>;
+  return <HomeCtx.Provider value={value}>{children}</HomeCtx.Provider>;
 }
 
 export const useHomeCtx = () => {

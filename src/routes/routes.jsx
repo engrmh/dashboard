@@ -1,4 +1,5 @@
 import HomePage from "../pages/home/home";
+import TransactionsPage from "../pages/transactions/transactions";
 
 export const routes = [
   {
@@ -7,7 +8,7 @@ export const routes = [
   },
   {
     path: "/transactions",
-    element: <></>,
+    element: <TransactionsPage />,
   },
   {
     path: "/sales",
