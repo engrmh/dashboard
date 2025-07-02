@@ -1,4 +1,4 @@
 .mainStack {
   height: calc(100vh - 116px);
-  overflow-y: "auto";
+  overflow-y: "auto" !important;
 }
