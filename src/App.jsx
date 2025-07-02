@@ -13,13 +13,13 @@ function App() {
       <Grid size={{ md: 2, lg: 1.5 }} display={{ xs: "none", md: "block" }}>
         <SideBar />
       </Grid>
-      <Grid size={{ xs: 12, md: 10, lg: 10.5 }}>
-        <Stack bgcolor="var(--bgGray)">
+      <Grid size={{ xs: 12, md: 10, lg: 10.5 }} overflow="hidden">
+        <Stack bgcolor="var(--bgGray)" overflow={"auto"} height={"100vh"}>
           <Stack padding={2}>
             <NavbarT />
           </Stack>
-          <Stack overflow="hidden" paddingTop={2} paddingX={2}>
-            <div className="mainStack">{router}</div>
+          <Stack paddingTop={2} paddingX={2}>
+            <div>{router}</div>
           </Stack>
         </Stack>
       </Grid>

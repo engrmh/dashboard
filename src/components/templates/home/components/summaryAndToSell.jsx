@@ -1,7 +1,7 @@
-import { Grid, Stack, Typography } from "@mui/material";
+import { Breadcrumbs, Grid, Rating, Stack, Typography } from "@mui/material";
 import BaseContainer from "./modules/baseContainer";
 import Chart from "../../../modules/charts/charts";
-import { summaryData } from "../data/data";
+import { summaryData, topSell } from "../data/data";
 
 export default function SummaryAndToSell() {
   const data = [
@@ -53,10 +53,55 @@ export default function SummaryAndToSell() {
           yData={summaryData.y}
         />
       </BaseContainer>
-      <BaseContainer
-        title="Top Selling Products"
-        size={{ xs: 12, md: 6 }}
-      ></BaseContainer>
+      <BaseContainer title="Top Selling Products" size={{ xs: 12, md: 6 }}>
+        {topSell.map((p, i) => (
+          <Stack
+            key={i}
+            bgcolor={i % 2 != 0 ? "#ccc4" : ""}
+            padding={1}
+            marginBottom="1rem"
+            flexDirection="row"
+            justifyContent="space-between"
+          >
+            <Stack flexDirection="row" gap={2}>
+              <Stack>
+                <img src={p.image} width={70} height={70} />
+              </Stack>
+              <Stack>
+                <Stack flexDirection="row" gap={1}>
+                  <Typography variant="p">{p.title}</Typography>
+                  <Rating value={p.star} readOnly size="small" />
+                </Stack>
+                <Breadcrumbs separator=",">
+                  {p.type.map((t, i) => (
+                    <Typography variant="p" key={i}>
+                      {t}
+                    </Typography>
+                  ))}
+                </Breadcrumbs>
+                <Breadcrumbs
+                  separator="."
+                  classes={{ separator: "categorySeperator" }}
+                >
+                  {p.category.map((c, i) => (
+                    <Typography variant="p" fontSize=".8rem" key={i}>
+                      {c}
+                    </Typography>
+                  ))}
+                </Breadcrumbs>
+              </Stack>
+            </Stack>
+            <Stack>
+              <Typography variant="p" fontWeight="bold">
+                $ {p.price}
+              </Typography>
+              <Typography variant="p" color="#aaa" fontSize=".8rem">
+                Sales
+              </Typography>
+            </Stack>
+          </Stack>
+        ))}
+      </BaseContainer>
     </Grid>
   );
 }
