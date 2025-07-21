@@ -1,0 +1,217 @@
+import PinDropIcon from "@mui/icons-material/PinDrop";
+import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
+import InsertDriveFileIcon from "@mui/icons-material/InsertDriveFile";
+import LocalDrinkIcon from "@mui/icons-material/LocalDrink";
+import ShieldIcon from "@mui/icons-material/Shield";
+
+export const summaryData = {
+  y: [120, 180, 120, 160, 80, 280],
+  x: ["Aug", "ُSep", "Oct", "Nov", "Dec", "Jan"],
+};
+
+export const topSell = [
+  {
+    title: "HomePod",
+    type: ["USB", "Wireless"],
+    category: ["White", "Slate Fabric", "Hands-Free"],
+    image: "https://picsum.photos/200/200",
+    star: 4,
+    price: 199,
+  },
+  {
+    title: "Macbook Pro",
+    type: ["USB", "Wireless"],
+    category: ["White", "Slate Fabric", "Hands-Free"],
+    image: "https://picsum.photos/200/200",
+    star: 4,
+    price: 199,
+  },
+  {
+    title: "Apple Watch",
+    type: ["USB", "Wireless"],
+    category: ["White", "Slate Fabric", "Hands-Free"],
+    image: "https://picsum.photos/200/200",
+    star: 4,
+    price: 199,
+  },
+];
+
+export const orderActivityCard1 = [
+  {
+    title: "Order Placed",
+    desc: "Your order has been received",
+    icon: <PinDropIcon />,
+    color: "#FFCC00",
+    time: "10:30 AM",
+  },
+  {
+    title: "Processing",
+    desc: "Seller is preparing your order",
+    icon: <ShoppingBasketIcon />,
+    color: "#0ABAB5",
+    time: "11:45 AM",
+  },
+  {
+    title: "Documentation",
+    desc: "Invoice generated for your order",
+    icon: <InsertDriveFileIcon />,
+    color: "#093FB4",
+    time: "12:15 PM",
+  },
+  {
+    title: "Quality Check",
+    desc: "Items undergoing quality inspection",
+    icon: <LocalDrinkIcon />,
+    color: "#0A400C",
+    time: "1:30 PM",
+  },
+  {
+    title: "Packaging",
+    desc: "Items being securely packed",
+    icon: <ShieldIcon />,
+    color: "#ED3500",
+    time: "2:45 PM",
+  },
+];
+export const products = [
+  {
+    id: 1,
+    name: "Apple MacBook Pro",
+    category: "Electronics",
+    price: 1500,
+    stock: 15,
+    rating: 4.8,
+    image: "/images/products/laptop.jpg",
+  },
+  {
+    id: 2,
+    name: "Samsung Galaxy S23",
+    category: "Electronics",
+    price: 900,
+    stock: 32,
+    rating: 4.6,
+    image: "/images/products/phone.jpg",
+  },
+  {
+    id: 3,
+    name: "Sony Wireless Headphones",
+    category: "Electronics",
+    price: 200,
+    stock: 47,
+    rating: 4.5,
+    image: "/images/products/headphones.jpg",
+  },
+  {
+    id: 4,
+    name: "Nike Running Shoes",
+    category: "Clothing",
+    price: 120,
+    stock: 24,
+    rating: 4.3,
+    image: "/images/products/shoes.jpg",
+  },
+  {
+    id: 5,
+    name: "The Power of Now Book",
+    category: "Books",
+    price: 25,
+    stock: 56,
+    rating: 4.7,
+    image: "/images/products/book.jpg",
+  },
+  {
+    id: 6,
+    name: "Wooden Desk",
+    category: "Home",
+    price: 350,
+    stock: 8,
+    rating: 4.4,
+    image: "/images/products/desk.jpg",
+  },
+  {
+    id: 7,
+    name: "De'Longhi Coffee Maker",
+    category: "Home",
+    price: 220,
+    stock: 12,
+    rating: 4.2,
+    image: "/images/products/coffee-maker.jpg",
+  },
+  {
+    id: 8,
+    name: "Apple Smart Watch",
+    category: "Electronics",
+    price: 450,
+    stock: 19,
+    rating: 4.6,
+    image: "/images/products/smartwatch.jpg",
+  },
+  {
+    id: 9,
+    name: "Men's Leather Bag",
+    category: "Clothing",
+    price: 150,
+    stock: 27,
+    rating: 4.1,
+    image: "/images/products/bag.jpg",
+  },
+  {
+    id: 10,
+    name: "Razer Gaming Mouse",
+    category: "Electronics",
+    price: 80,
+    stock: 41,
+    rating: 4.4,
+    image: "/images/products/mouse.jpg",
+  },
+];
+export const orders = [
+  {
+    id: 1001,
+    customer: "Ali Mohammadi",
+    date: "2023-08-05",
+    status: "Delivered",
+    amount: 1825,
+    products: [1, 3, 5],
+  },
+  {
+    id: 1002,
+    customer: "Fatemeh Ahmadi",
+    date: "2023-08-06",
+    status: "Processing",
+    amount: 900,
+    products: [2],
+  },
+  {
+    id: 1003,
+    customer: "Reza Norouzi",
+    date: "2023-08-07",
+    status: "Shipped",
+    amount: 530,
+    products: [8, 10],
+  },
+  {
+    id: 1004,
+    customer: "Sara Karimi",
+    date: "2023-08-08",
+    status: "Cancelled",
+    amount: 150,
+    products: [9],
+  },
+  {
+    id: 1005,
+    customer: "Mohammad Hosseini",
+    date: "2023-08-09",
+    status: "Pending Payment",
+    amount: 220,
+    products: [7],
+  },
+  {
+    id: 1006,
+    customer: "Nazanin Rezaei",
+    date: "2023-08-10",
+    status: "Delivered",
+    amount: 1970,
+    products: [1, 4, 6],
+  },
+];

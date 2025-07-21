@@ -1,6 +1,8 @@
 import DashboardContainer from "../../modules/dashboardContainer/dashboardContainer";
+import OrderOverviewRows from "./components/orderOverviewRows";
 import OverviewCards from "./components/overviewCards";
 import SummaryAndToSell from "./components/summaryAndToSell";
+import ThreeProducts from "./components/threeProducts";
 import "./styles/style.css";
 
 export default function Home() {
@@ -8,6 +10,8 @@ export default function Home() {
     <DashboardContainer pageTitle="Ecommerce Dashboard" links={[]}>
       <OverviewCards />
       <SummaryAndToSell />
+      <OrderOverviewRows />
+      <ThreeProducts />
     </DashboardContainer>
   );
 }
