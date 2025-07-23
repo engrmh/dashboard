@@ -81,7 +81,7 @@ export const products = [
     price: 1500,
     stock: 15,
     rating: 4.8,
-    image: "/images/products/laptop.jpg",
+    image: "",
   },
   {
     id: 2,
@@ -90,7 +90,7 @@ export const products = [
     price: 900,
     stock: 32,
     rating: 4.6,
-    image: "/images/products/phone.jpg",
+    image: "",
   },
   {
     id: 3,
@@ -99,7 +99,7 @@ export const products = [
     price: 200,
     stock: 47,
     rating: 4.5,
-    image: "/images/products/headphones.jpg",
+    image: "",
   },
   {
     id: 4,
@@ -108,7 +108,7 @@ export const products = [
     price: 120,
     stock: 24,
     rating: 4.3,
-    image: "/images/products/shoes.jpg",
+    image: "",
   },
   {
     id: 5,
@@ -117,7 +117,7 @@ export const products = [
     price: 25,
     stock: 56,
     rating: 4.7,
-    image: "/images/products/book.jpg",
+    image: "",
   },
   {
     id: 6,
@@ -126,7 +126,7 @@ export const products = [
     price: 350,
     stock: 8,
     rating: 4.4,
-    image: "/images/products/desk.jpg",
+    image: "",
   },
   {
     id: 7,
@@ -135,7 +135,7 @@ export const products = [
     price: 220,
     stock: 12,
     rating: 4.2,
-    image: "/images/products/coffee-maker.jpg",
+    image: "",
   },
   {
     id: 8,
@@ -144,7 +144,7 @@ export const products = [
     price: 450,
     stock: 19,
     rating: 4.6,
-    image: "/images/products/smartwatch.jpg",
+    image: "",
   },
   {
     id: 9,
@@ -153,7 +153,7 @@ export const products = [
     price: 150,
     stock: 27,
     rating: 4.1,
-    image: "/images/products/bag.jpg",
+    image: "",
   },
   {
     id: 10,
@@ -162,7 +162,7 @@ export const products = [
     price: 80,
     stock: 41,
     rating: 4.4,
-    image: "/images/products/mouse.jpg",
+    image: "",
   },
 ];
 export const orders = [

@@ -1,4 +1,5 @@
 import HomePage from "../pages/home/home";
+import ProductsPage from "../pages/products/products";
 import TransactionsPage from "../pages/transactions/transactions";
 
 export const routes = [
@@ -16,6 +17,6 @@ export const routes = [
   },
   {
     path: "/products",
-    element: <></>,
+    element: <ProductsPage />,
   },
 ];
