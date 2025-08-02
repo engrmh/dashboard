@@ -9,6 +9,7 @@ export default function SInput({ label, value, onChange }) {
       variant="standard"
       value={value}
       onChange={onChange}
+      // type={type}
     />
   );
 }

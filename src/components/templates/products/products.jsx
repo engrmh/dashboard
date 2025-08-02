@@ -13,11 +13,14 @@ import { products } from "../home/data/data";
 import DashboardContainer from "../../modules/dashboardContainer/dashboardContainer";
 import AddBoxIcon from "@mui/icons-material/AddBox";
 import AddNewProduct from "./componets/addProducts";
+import OpenInNewIcon from "@mui/icons-material/OpenInNew";
+import { useNavigate } from "react-router-dom";
 
 export default function Products() {
   const [selectedRow, setSelectedRow] = useState({});
   const [openDialog, setOpenDialog] = useState(false);
   const [openAddNewProductDialog, setOpenAddNewProductDialog] = useState(false);
+  const loaction = useNavigate();
 
   const columns = [
     { field: "id", headerName: "ID", width: 90 },
@@ -66,6 +69,26 @@ export default function Products() {
       headerName: "Stock",
       type: "number",
       width: 110,
+    },
+    {
+      field: "",
+      headerName: "Actions",
+      width: 110,
+      renderCell: (params) => {
+        return (
+          <Stack direction="row" spacing={1}>
+            <Button
+              variant="contained"
+              color="primary"
+              onClick={() => {
+                location.replace(`/products/${params.row.id}`); // Navigate to the product details page
+              }}
+            >
+              <OpenInNewIcon />
+            </Button>
+          </Stack>
+        );
+      },
     },
   ];
 
@@ -127,12 +150,12 @@ export default function Products() {
       </Dialog>
       <AddNewProduct
         openAddProduct={openAddNewProductDialog}
-        onSumbiting={(status) => {
-          if (status) {
+        onSumbiting={(data) => {
+          if (!data) {
             // add new product to server
             setOpenAddNewProductDialog(false);
           } else {
-            setOpenAddNewProductDialog(status);
+            setOpenAddNewProductDialog(false);
           }
         }}
       />
